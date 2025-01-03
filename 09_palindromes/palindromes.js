@@ -1,17 +1,16 @@
 const palindromes = function (string) {
+  let newString = string
+                    .toLowerCase()
+                    .replaceAll((/[^a-z^0-9]/g), "");
 
-  let newString = string.toLowerCase().replaceAll(/[^a-z^0-9]/g, "");
+  let reversedString = newString
+                    .split("")
+                    .reverse()
+                    .join("");
 
-  let reverseString = newString.split("").reverse().join("");
+  return newString === reversedString;
 
-  if (newString === reverseString) {
-    return true;
-  } else {
-    return false;
-  }
-  
-  
-  };
+};
 
 // Do not edit below this line
 module.exports = palindromes;

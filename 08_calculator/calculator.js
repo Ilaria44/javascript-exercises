@@ -1,43 +1,28 @@
 const add = function(num1, num2) {
-  let result = num1 + num2;
-
-  return result;
+  return num1 + num2;
 };
 
 const subtract = function(num1, num2) {
-  let result;
   if(num1 <= num2) {
-    result = num2 - num1;
+    return num2 - num1;
   } else {
-    result = num1 - num2;
+    return num1 - num2;
   }
 
-  return result;
 };
 
 const sum = function(numArray) {
-  let result = 0;
-	for (num of numArray) {
-    result += num;
-  }
-
-  return result;
+  return numArray.reduce((accumulator, item) => accumulator + item, 0);
+  
 };
 
 const multiply = function(numArray) {
-  let result = numArray[0];
-
-  for (i = 1; i < numArray.length; i++) {
-    result *= numArray[i];
-  }
-
-  return result;
+  return numArray.reduce((accumulator, item) => accumulator * item, 1);
 };
 
 const power = function(num1, num2) {
-  let result = num1 ** num2;
+  return num1 ** num2;
 	
-  return result;
 };
 
 const factorial = function(num) {
